@@ -38,3 +38,11 @@ class Book(models.Model):
 class Store(models.Model):
     name = models.CharField(max_length=300)
     books = models.ManyToManyField(Book)
+
+
+class Compra(models.Model):
+    name = models.CharField(max_length=200)
+    idade = models.CharField(max_length=10)
+
+    def __str__(self):
+        return self.nome
